@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Feedback</title>
+	<link rel="stylesheet" href="scss/styles.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script>
+		$(function () {
+  			$('#record-toggle').change(function(){                
+    			$('#record-area').toggle(this.checked);
+    			$('#txt-area').toggle(!this.checked);
+  			}).change(); //ensure visible state matches initially
+			});
+	</script>
+</head>
+<body>
+	<div class="container-fluid h-100 scroll-col">
+		<div class="container mt-4 mb-4">
+			<div class="row">
+				<div class="col">
+					<form class="form-group" name="feedback_form">
+						<h1>撰寫意見</h1>
+						<label for="subject" class="mt-4"><h3>主旨</h3></label>
+						<input type="text" class="form-control" placeholder="在此輸入主旨..." id="subject">
+						<label for="content" class="mt-4"><h3>內文</h3></label>
+						<input type="checkbox" class="ml-4" id="record-toggle">&nbsp;錄音模式
+						<div id="txt-area">
+							<textarea class="form-control" id="content" rows="5"></textarea>
+						</div>
+						<div id="record-area" style="display: none;">
+							<!--<label for="subject" class="mt-4"><h3>錄音</h3></label>
+							<br/>-->
+							<div class="row align-self-center">
+								<div class="col-12 col-md-2 mt-4">
+									<a class="submit-btn" id="record-audio" onclick="">開始錄音</a>
+								</div>
+				    			<div class="col-12 col-md-9 mt-4">
+				    				<audio id="audio" autoplay="" controls=""></audio>
+				    			</div>
+				    		</div>
+						</div>
+						<br>
+						<a href="#" class="submit-btn" style="font-size: 125%;">提交！</a>
+					</form>
+				</div>
+			</div>
+		</div>
+		<br>
+		<hr class="solid">
+		<div class="container mt-5">
+			<div class="col">
+				<div class="row">
+					<h1>回覆</h1>
+				</div>
+				<div class="row w-100 reply">
+					<div class="row w-100">
+						<h2>Re:Test</h2>
+					</div>
+					<div class="row w-100">
+						<h4>Reply from us...</h4>
+					</div>				
+				</div>
+				<hr class="dotted">
+				<div class="row w-100 reply">
+					<div class="row w-100">
+						<h2>Re:Test</h2>
+					</div>
+					<div class="row w-100">
+						<h4>Reply from us...</h4>
+					</div>				
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+</html>

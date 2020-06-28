@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'KozGoPr6N-Bold';
+  src: url("../assets/fonts/KozGoPr6N-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/KozGoPr6N-Bold.woff") format("woff");
+}
+
+html, body{
+	font-family: 'KozGoPr6N-Bold' !important;
+	height: 100%;
+	overflow-y: hidden;
+	color: #434E5B !important;
+	font-size: 110% !important;
+}
+
+.nav-link{
+	color: rgba(79, 79, 80, 1);
+}
+
+.btn-primary{
+	border-radius: 30px 30px 30px 30px !important;
+	font-size: 150%;
+	padding: 0.25em 1em;
+}
+
+.align-self-center{
+	margin-bottom: 5rem !important;
+}
+
+.card{
+	cursor: pointer;
+}
+
+.reply{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1rem;
+}
+.scroll-col{
+	height: calc(100vh - 110px); 
+	overflow-y: scroll;
+}
+
+.exercise-banner{
+	color: #000;
+	background-color: #fff !important;
+	background-image: url('../assets/SVG/catalog-brush-tl.svg');
+	background-repeat: no-repeat;
+	//background-attachment: fixed;
+	background-position: 0 0;
+	background-size: 50%;
+	h1{
+		font-weight: normal;
+	}
+}
+
+.video-wrapper{
+    position: relative;
+    padding-bottom: 56.25%;  //16:9
+    overflow: hidden;
+    iframe{
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+	}
+}
+
+hr.dotted {
+    border-top: 2px dotted #999;
+}
+
+.section-header{
+	background: #fff;
+	position: sticky;
+	top: 0%;
+	bottom: 0%;
+}
+
+//buttons
+.begin-btn{
+	color: #434E5B !important;
+	background-image: url('../assets/SVG/begin-button.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 1em 1em;
+	font-size: 150%;
+	filter: drop-shadow( 7px 7px 11px rgba(71, 69, 69, 0.55));
+	position: absolute;
+	right: 2%;
+
+}
+
+.review-btn{
+	color: #434E5B !important;
+	background-image: url('../assets/SVG/review-button.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 1em 1em;
+	font-size: 125%;
+	filter: drop-shadow( 7px 7px 11px rgba(71, 69, 69, 0.55));
+	position: absolute;
+	right: 2%;
+	margin-top: -25px;
+	cursor: pointer;
+
+}
+
+.next-btn{
+	color: #434E5B !important;
+	background-image: url('../assets/SVG/review-button.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 1em 1em;
+	font-size: 125%;
+	filter: drop-shadow( 7px 7px 11px rgba(71, 69, 69, 0.55));
+	position: absolute;
+	margin: 10px 0 10px 0;
+	cursor: pointer;
+}
+
+.submit-btn{
+	color: #434E5B !important;
+	background-image: url('../assets/SVG/review-button.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 1em 1em;
+	font-size: 125%;
+	filter: drop-shadow( 7px 7px 11px rgba(71, 69, 69, 0.55));
+	cursor: pointer;
+}
+
+.task-card-bg{
+	background-image: url('../assets/SVG/tasks-button.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+}
+
+.puzzle-card-bg{
+	background-image: url('../assets/SVG/puzzle-button.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+}
+
+.feedback-card-bg{
+	background-image: url('../assets/SVG/feedback-button.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+}
+
+.form-control { //idk why do i need to important everything to override stuff...
+    border: 3px solid black !important;
+    border-radius: 20px !important;
+    padding: 15px 0 15px 10px !important;
+}
+
+.drop-shadow{
+	filter: drop-shadow( 7px 7px 11px rgba(71, 69, 69, 0.55));
+}
+
+.instruction-pic{
+	width:100%; 
+	height: auto; 
+	margin-top: 15px; 
+	margin-bottom: 15px;
+}
+
+$theme-colors:(
+	primary: #ED9E98
+);
+
+@import "../bootstrap/scss/bootstrap.scss";

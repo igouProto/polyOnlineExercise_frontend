@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>小測驗</title>
+	<link rel="stylesheet" href="scss/styles.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script>
+		function checkAns(submittedID){
+			const correctAns = 1; //the id of the correct answer, make it subject to the actual question in the final version perhaps?
+			if (submittedID == correctAns){
+				alert("YAY!"); //proceed to the exercise today
+			}else{
+				hint = document.getElementById("correctAns");
+				hint.innerHTML = "<div class='alert alert-warning alert-dismissible fade show' role='alert'>提示文本放這裡！<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>"
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row mt-4">
+			<div class="col-12">
+				<h1>小測驗</h1>
+			</div>
+		</div>
+		<div class="row mt-4">
+			<div class="col-12">
+				<p>題目：
+				<p>從事運動之前應該要先做什麼？（隨便出的當placeholder）
+			</div>
+		</div>
+		<div class="row mt-2">
+			<div class="col-12"id="correctAns">
+				
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-12 col-md-4">
+				<div class="card mb-4" onclick="">
+					<div class="card-body text-center">
+						<h2 class="card-title" id="option1" onclick="checkAns(1);">暖身運動</h2>
+					</div>					
+				</div>				
+			</div>
+			<div class="col-12 col-md-4">
+				<div class="card mb-4" onclick="">
+					<div class="card-body text-center">
+						<h2 class="card-title" id="option2" onclick="checkAns(2);">運動</h2>
+					</div>					
+				</div>				
+			</div>
+			<div class="col-12 col-md-4">
+				<div class="card mb-4" onclick="">
+					<div class="card-body text-center">
+						<h2 class="card-title" id="option 3" onclick="checkAns(3);">動</h2>
+					</div>					
+				</div>				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
